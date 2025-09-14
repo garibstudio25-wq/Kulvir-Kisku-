@@ -568,4 +568,4 @@
         function openStore() { const storeList = document.getElementById('storeList'); storeList.innerHTML = ''; storeItems.forEach(item => { const itemOwned = userProfile.inventory && userProfile.inventory.includes(item.id); const itemDiv = document.createElement('div'); itemDiv.className = 'store-item'; itemDiv.innerHTML = `<img src="${item.image}" alt="${item.name}"> <div class="store-item-info"> <h4>${item.name}</h4> <p>Price: ${item.price} coins</p> <button class="buy-btn" id="buy-${item.id}" onclick="buyItem('${item.id}', ${item.price}, '${item.name}', '${item.image}')" ${itemOwned || coins < item.price ? 'disabled' : ''}> ${itemOwned ? 'Owned' : 'Buy'} </button> </div>`; storeList.appendChild(itemDiv); }); openModal('storeModal'); }
     </script>
 </body>
-</html>
+    </html>
